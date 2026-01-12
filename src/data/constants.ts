@@ -4,7 +4,7 @@ export enum SkillNames {
   // AZURE = "azure",    // +
   LINUX = "linux",    
   // SHELL = "shell",    // +
-  // PYTHON = "python",  // +
+  PYTHON = "python",  // +
   GIT = "git",
   DOCKER = "docker",
   // SELENIUM = "selenium",  // +
@@ -248,6 +248,14 @@ using use = useUsing("use")`,
       "The triangle compony, helps you deploy and go touch grass! 🚀🌿",
     color: "#6cc24a",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+  },
+  [SkillNames.PYTHON]: {
+    id: 25,
+    name: "python",
+    label: "Python",
+    shortDescription: "The coding equivalent of 'It just works' — even when you barely know what you're doing. 🐍📜",
+    color: "#61dafb",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
 };
 

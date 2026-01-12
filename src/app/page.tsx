@@ -8,6 +8,8 @@ import SkillsSection from "@/components/sections/skills";
 import ProjectsSection from "@/components/sections/projects";
 import ContactSection from "@/components/sections/contact";
 import HeroSection from "@/components/sections/hero";
+import AboutMeSection from "@/components/sections/about-me";
+import GalaxyButton from "@/components/galaxy-button";
 
 function MainPage() {
   return (
@@ -19,8 +21,9 @@ function MainPage() {
           </div>
           <HeroSection />
           <SkillsSection />
-          <ProjectsSection />
           <ContactSection />
+          <GalaxyButton />
+          <AboutMeSection />
         </main>
       </SmoothScroll>
     </>

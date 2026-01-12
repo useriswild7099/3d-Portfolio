@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import styles from "./style.module.scss";
 import { opacity, background } from "./anim";
@@ -17,6 +17,18 @@ interface HeaderProps {
 
 const Header = ({ loader }: HeaderProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() || 0;
+    if (latest > previous && latest > 150 && !isActive) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
     <motion.header
       className={cn(
@@ -32,11 +44,12 @@ const Header = ({ loader }: HeaderProps) => {
         y: -80,
       }}
       animate={{
-        y: 0,
+        y: hidden ? "-100%" : 0,
       }}
       transition={{
         delay: loader ? 3.5 : 0, // 3.5 for loading, .5 can be added for delay
         duration: 0.8,
+        y: { duration: 0.3 }
       }}
     >
       {/* <div
