@@ -24,9 +24,9 @@ const config = {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "",
+    twitter: "https://x.com/whoodatis998",
     linkedin: "https://www.linkedin.com/in/prince-tigga-95b123324/",
-    instagram: "",
+    instagram: "https://www.instagram.com/artificial_studio._?igsh=cnNqcXNmOHZvcDRj",
     facebook: "",
     github: "https://github.com/useriswild7099",
   },
