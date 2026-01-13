@@ -59,11 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={[archivoBlack.className].join(" ")}>
       <head>
-        <Script
-          defer
-          src={process.env.UMAMI_DOMAIN}
-          data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
+        {/* <Analytics /> */}
         {/* <Analytics /> */}
       </head>
       <body>
