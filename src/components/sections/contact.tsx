@@ -40,14 +40,14 @@ const ContactSection = () => {
           <CardContent className="space-y-6">
             <a
               href={`mailto:${email}`}
-              className="flex items-center gap-4 p-4 rounded-lg bg-white/50 dark:bg-zinc-800/50 hover:bg-white/80 dark:hover:bg-zinc-700/50 transition-colors group"
+              className="flex items-center gap-4 p-4 transition-colors group"
             >
               <div className="relative w-16 h-16 flex-shrink-0">
                 <Image 
                   src="/assets/icons/mail-icon.jpg" 
                   alt="Email" 
                   fill 
-                  className="object-contain drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]"
+                  className="object-contain"
                 />
               </div>
               <div>
@@ -59,14 +59,14 @@ const ContactSection = () => {
             </a>
             <a
               href={`tel:${phone}`}
-              className="flex items-center gap-4 p-4 rounded-lg bg-white/50 dark:bg-zinc-800/50 hover:bg-white/80 dark:hover:bg-zinc-700/50 transition-colors group"
+              className="flex items-center gap-4 p-4 transition-colors group"
             >
               <div className="relative w-16 h-16 flex-shrink-0">
                 <Image 
                   src="/assets/icons/phone-icon.jpg" 
                   alt="Phone" 
                   fill 
-                  className="object-contain drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]"
+                  className="object-contain"
                 />
               </div>
               <div>
